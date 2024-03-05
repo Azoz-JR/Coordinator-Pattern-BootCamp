@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="CoordinatorTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uvk-ud-iTM">
+                                <rect key="frame" x="170" y="379" width="53.333333333333343" height="39"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Buy"/>
+                                <connections>
+                                    <action selector="buyTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZSo-uU-mGQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uNr-4X-Dky">
+                                <rect key="frame" x="125.33333333333333" y="439" width="142.33333333333337" height="39"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Create Account"/>
+                                <connections>
+                                    <action selector="createAccountTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="A2v-nz-DyN"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="lGp-2c-hE6">
+                                <rect key="frame" x="131" y="498" width="131" height="32"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                            </segmentedControl>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="uvk-ud-iTM" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="0iF-fm-2AQ"/>
+                            <constraint firstItem="uNr-4X-Dky" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="JGH-21-6in"/>
+                            <constraint firstItem="uvk-ud-iTM" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="-40" id="Lf2-sl-SQ9"/>
+                            <constraint firstItem="lGp-2c-hE6" firstAttribute="top" secondItem="uNr-4X-Dky" secondAttribute="bottom" constant="20" id="M9F-2K-xk8"/>
+                            <constraint firstItem="lGp-2c-hE6" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="dT8-OW-Qs7"/>
+                            <constraint firstItem="uNr-4X-Dky" firstAttribute="top" secondItem="uvk-ud-iTM" secondAttribute="bottom" constant="21" id="hhm-hy-MJc"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="product" destination="lGp-2c-hE6" id="r27-dv-zst"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131" y="-27"/>
+        </scene>
+        <!--Buy View Controller-->
+        <scene sceneID="cP0-cK-ugm">
+            <objects>
+                <viewController storyboardIdentifier="BuyViewController" id="ovW-sv-Lm6" customClass="BuyViewController" customModule="CoordinatorTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ltj-dO-8uO">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Buy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UqC-hO-HJb">
+                                <rect key="frame" x="163.66666666666666" y="413.66666666666669" width="66" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="hsR-4e-F1k"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <color key="textColor" name="AccentColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="j33-7e-lJY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="UqC-hO-HJb" firstAttribute="centerX" secondItem="j33-7e-lJY" secondAttribute="centerX" id="m57-F6-jFB"/>
+                            <constraint firstItem="UqC-hO-HJb" firstAttribute="centerY" secondItem="j33-7e-lJY" secondAttribute="centerY" id="z5g-sS-AZi"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="productLabel" destination="UqC-hO-HJb" id="osi-cd-WHX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dgK-Yt-vSh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="989" y="-24"/>
+        </scene>
+        <!--Create Account View Controller-->
+        <scene sceneID="7dC-zE-IaG">
+            <objects>
+                <viewController storyboardIdentifier="CreateAccountViewController" id="19t-Yk-HQQ" customClass="CreateAccountViewController" customModule="CoordinatorTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="g2j-JO-3V7">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create Account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qzS-bm-Gm0">
+                                <rect key="frame" x="64" y="413.66666666666669" width="265.33333333333331" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="jKh-Pc-Hhj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <color key="textColor" name="AccentColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="HMo-wU-7Z5"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="qzS-bm-Gm0" firstAttribute="centerY" secondItem="HMo-wU-7Z5" secondAttribute="centerY" id="Ct3-lZ-hSE"/>
+                            <constraint firstItem="qzS-bm-Gm0" firstAttribute="centerX" secondItem="HMo-wU-7Z5" secondAttribute="centerX" id="n4h-Ay-Hls"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h3M-Lp-EoN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1900" y="-40"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
